@@ -8,34 +8,49 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="theme-color" content="#000000" />
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <script type="text/javascript" src="/src/index.js">
+    var test = 3;
+    </script>    
+    <title>The Idea Shop</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <header>
+      <nav class="topBar">
+        <a class="topTitle" href="index.html" style="color:black">The Idea Shop</a>
+        <a class="cart" href="#">&#128722</a>
+        <a href="#"><img class="usrAvatar" src="../Resources/usravt.png" alt="user"></a>
+        <a class="menu" href="#">
+          <h3 class="menu">Menu</h3>
+        </a>
+      </nav>
+    </header>
+    <main id="maincont">
+        <div class="item" id="dream0">
+            <img src="Resources/Daydreaming.jpg" alt="Daydreaming" id="dream0">
+            <h1 class="itemTitle" id="dream0">Some Dream</h1>
+            <p class="itemDiscrp" id="dream0">Dont get caught daydreaming, get youre now!<br><br><strong>$9.99</strong></p>
+        </div>
+        <div class="item" id="aspiration">
+            <img src="Resources/aspiration.jpg" alt="Daydreaming">
+            <h1 class="itemTitle">Aspiration</h1>
+            <p class="itemDiscrp">Shoot for the sky with big aspirations<br><br><strong>$19.99</strong></p>
+        </div>
+        <div class="item" id="goal">
+            <img src="Resources/Goal-Setting.jpg" alt="Daydreaming">
+            <h1 class="itemTitle">Goal</h1>
+            <p class="itemDiscrp">Go ahead, write it down, then go get it<br><br><strong>$29.99</strong></p>
+        </div>
+        <div class="item" id="results">
+            <img src="Resources/results.jpg" alt="Daydreaming">
+            <h1 class="itemTitle">Results</h1>
+            <p class="itemDiscrp">dont want to wait? Get your results now!<br><br><strong>$79.99</strong></p>
+        </div>
+    </main>
+    <aside>
+        <h1>Cart Details</h1>
+        <p>There is nothing in your cart...</p>
+    </aside>
+    <footer>Follow us on Social media and give us all your monies!</footer>
   </body>
 </html>
