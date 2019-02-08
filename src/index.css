@@ -14,17 +14,59 @@ code {
     monospace;
 }
 
-/*  header and nav styling  */
+/* page grid */
+#mastercont{
+  display: grid;
+  grid-template:7% 400px auto 13% / 25% 25% 25% 25%;
+  grid-template-areas: 
+    "header header header header"
+    "main main main aside"
+    "main main main aside"
+    "footer footer footer footer";
+}
+#headcont{
+  grid-column: 1 / span 4;
+  grid-row: auto;
+  grid-template-areas:
+    ". . . ."
+    "nav nav nav nav"
+    ". . . .";
+}
+#itemcont{
+  grid-column: 1 span 3;
+  grid-row: auto; 
+  display: grid;
+  grid-template: 375px 375px auto / 275px 275px 275px 275px;
+  grid-auto-flow: row;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  padding: 30px;
+}
+#sidecont{
+  grid-area: 2 / 4 / 5 / 5;
+}
+#footer{
+  grid-column-end: span 4;
+  justify-self: stretch;
+  text-align: center;
+}
+
+/*  header and nav cont styling  */
+.topBar{
+  grid-column-start: span;
+  grid-template: 10% 80% 10% / 25px auto 50px 60px 60px 25px;
+
+}
 nav{
    background-color: darkgray;
    width: 100%;
    height: inherit;
    display: grid;
-   grid-template-columns: 1fr 50px 50px 75px;
 }
 nav a{
   color: black;
   text-decoration: none;
+  grid-row-start: 2;
 }
 nav a:visited{
   color: black;
@@ -32,28 +74,29 @@ nav a:visited{
 .topTitle{
   font-size: 32pt;
   font-family: Arial, Helvetica, sans-serif;
+  order: 1;
+  grid-column-start: 2;
 }
 .usrAvatar{
   width: 35px;
-  grid-column-start: span 1;
-  margin: 10% 10% 0% 0%;
+  grid-column-start: 4;
+  align-self: end;
+  order: 3;
+}
+.usrAvatar img{
+  width: inherit;
 }
 .cart{
-  width: 50px;
-  margin: 10% 10% 0% 0%;
-  padding: 15px 10px 0px 0px;
+  width: 48pt;
+  grid-column-start: 3;
+  align-self: center;
 }
 .menu{
-  margin: 10% 10% 0% 0%;
+  align-self: center;
+  grid-column-start: 5;
 }
 
-/*  main styling  */
-#maincont{
-  display: flex;
-  flex-wrap: wrap;
-  float: left;
-  margin: 5%;
-}
+/*  item cont styling  */
 
 h1{
   font-size: 24pt;
@@ -62,7 +105,6 @@ h1{
 .item{
   width: 250px;
   height: 380px;
-  margin: 15px;
 }
 
 .item:hover{
@@ -75,8 +117,9 @@ h1{
 
 .itemDiscrip{
   font-size: 12pt;
-  justify-content: left;
+  justify-self: left;
 }
+
 /*  aside styling  */
 aside{
   display: flex;
@@ -93,4 +136,5 @@ footer{
   margin-top: 500px;
   background: darkgrey;
   padding: 5%;
+  order: 5;
 }

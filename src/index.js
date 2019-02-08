@@ -17,11 +17,13 @@ serviceWorker.unregister();
 /*
 code to clone divs for cart details. funtion not working. 
 Figure out, fix, then uncomment.
+*/
 
 
 
 // event looking for clicks on our items
-document.getElementById("dream").addEventListener("click", addToCart('dream'));
+
+document.getElementById("dream").addEventListener("click", addToCart("dream"), "once");
 document.getElementById("aspiration").addEventListener("click", addToCart('aspiration'));
 document.getElementById("goal").addEventListener("click", addToCart('goal'));
 document.getElementById("results").addEventListener("click", addToCart('results'));
@@ -29,16 +31,19 @@ document.getElementById("results").addEventListener("click", addToCart('results'
 var i = 0;
 
 
-function addToCart(id){
-    
-    var original = document.getElementById('id' + i);
+function addToCart(){
+    var original = document.getElementById(arguments[0]);
     var clone = original.cloneNode(true);
+    clone.id = (arguments[0] + 1);
     i++;
-    clone.id = "dream" + i;
-    clone.getElementsByTagName('img')[0].id = "img-item" + i;
-    clone.getElementsByTagName('input')[0].id = "select-item-value" + i;
+    
+    var destination = document.getElementById('sidecont');
+    destination.appendChild(clone);
+    
+    
+    
+    //clone.getElementsByTagName('img')[0].id = "img-item" + i;
+    //clone.getElementsByTagName('input')[0].id = "select-item-value" + i;
     //below line not needed?
     //original.parentNode.appendChild(clone);
-    
 }
-*/

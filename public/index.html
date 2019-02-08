@@ -7,50 +7,62 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <script src="src/index.js"></script>
     <meta name="theme-color" content="#000000" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <script type="text/javascript" src="/src/index.js">
-    var test = 3;
-    </script>    
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />  
     <title>The Idea Shop</title>
   </head>
-  <body>
-    <header>
+  <body id="mastercont">
+    <header id="headcont">
       <nav class="topBar">
         <a class="topTitle" href="index.html" style="color:black">The Idea Shop</a>
         <a class="cart" href="#">&#128722</a>
-        <a href="#"><img class="usrAvatar" src="../Resources/usravt.png" alt="user"></a>
+        <a class="usrAvatar" href="#"><img src="../Resources/usravt.png" alt="user"></a>
         <a class="menu" href="#">
           <h3 class="menu">Menu</h3>
         </a>
       </nav>
     </header>
-    <main id="maincont">
-        <div class="item" id="dream0">
-            <img src="Resources/Daydreaming.jpg" alt="Daydreaming" id="dream0">
-            <h1 class="itemTitle" id="dream0">Some Dream</h1>
-            <p class="itemDiscrp" id="dream0">Dont get caught daydreaming, get youre now!<br><br><strong>$9.99</strong></p>
-        </div>
-        <div class="item" id="aspiration">
-            <img src="Resources/aspiration.jpg" alt="Daydreaming">
-            <h1 class="itemTitle">Aspiration</h1>
-            <p class="itemDiscrp">Shoot for the sky with big aspirations<br><br><strong>$19.99</strong></p>
-        </div>
-        <div class="item" id="goal">
-            <img src="Resources/Goal-Setting.jpg" alt="Daydreaming">
-            <h1 class="itemTitle">Goal</h1>
-            <p class="itemDiscrp">Go ahead, write it down, then go get it<br><br><strong>$29.99</strong></p>
-        </div>
-        <div class="item" id="results">
-            <img src="Resources/results.jpg" alt="Daydreaming">
-            <h1 class="itemTitle">Results</h1>
-            <p class="itemDiscrp">dont want to wait? Get your results now!<br><br><strong>$79.99</strong></p>
-        </div>
+    <main id="itemcont">
+      <div class="item" id="dream">
+        <img src="Resources/Daydreaming.jpg" alt="Daydreaming" id="dream0">
+        <h1 class="itemTitle" id="dream0">Some Dream</h1>
+        <p class="itemDiscrp" id="dream0">Dont get caught daydreaming, get youre now!<br><br><strong>$9.99</strong></p>
+      </div>
+      <div class="item" id="aspiration">
+        <img src="Resources/aspiration.jpg" alt="Daydreaming">
+        <h1 class="itemTitle">Aspiration</h1>
+        <p class="itemDiscrp">Shoot for the sky with big aspirations<br><br><strong>$19.99</strong></p>
+      </div>
+      <div class="item" id="goal">
+        <img src="Resources/Goal-Setting.jpg" alt="Daydreaming">
+        <h1 class="itemTitle">Goal</h1>
+        <p class="itemDiscrp">Go ahead, write it down, then go get it<br><br><strong>$29.99</strong></p>
+      </div>
+      <div class="item" id="results">
+        <img src="Resources/results.jpg" alt="Daydreaming">
+        <h1 class="itemTitle">Results</h1>
+        <p class="itemDiscrp">dont want to wait? Get your results now!<br><br><strong>$79.99</strong></p>
+      </div>
     </main>
-    <aside>
-        <h1>Cart Details</h1>
-        <p>There is nothing in your cart...</p>
+    <aside id="sidecont">
+      <h1>Cart Details</h1>
+      <p>There is nothing in your cart...</p>
     </aside>
-    <footer>Follow us on Social media and give us all your monies!</footer>
+    <footer id="footer"><p>Follow us on Social media and give us all your monies!</p></footer>
   </body>
+  <!-- <script>
+  document.getElementById("dream").addEventListener("click", addToCart("dream"));
+
+  function addToCart(id){
+    
+    var original = document.getElementById('id');
+    var clone = original.cloneNode(true);
+    clone.id = 'id' + i;
+    i++;
+    
+    var destination = document.getElemetntById('sidecont');
+    destination.appendChild(clone);
+  }
+  </script> -->
 </html>
