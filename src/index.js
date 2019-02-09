@@ -21,29 +21,3 @@ Figure out, fix, then uncomment.
 
 
 
-// event looking for clicks on our items
-
-document.getElementById("dream").addEventListener("click", addToCart("dream"), "once");
-document.getElementById("aspiration").addEventListener("click", addToCart('aspiration'));
-document.getElementById("goal").addEventListener("click", addToCart('goal'));
-document.getElementById("results").addEventListener("click", addToCart('results'));
-
-var i = 0;
-
-
-function addToCart(){
-    var original = document.getElementById(arguments[0]);
-    var clone = original.cloneNode(true);
-    clone.id = (arguments[0] + 1);
-    i++;
-    
-    var destination = document.getElementById('sidecont');
-    destination.appendChild(clone);
-    
-    
-    
-    //clone.getElementsByTagName('img')[0].id = "img-item" + i;
-    //clone.getElementsByTagName('input')[0].id = "select-item-value" + i;
-    //below line not needed?
-    //original.parentNode.appendChild(clone);
-}
